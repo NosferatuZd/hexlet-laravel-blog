@@ -7,6 +7,8 @@
             <a href="{{ route('articles.show', $article->id) }}">
                 {{ $article->name }}
             </a>
+
+            <a href="{{ route('articles.edit', ['id' => $article->id]) }}">Редактировать</a>
         </h2>
         <div>{{ \Illuminate\Support\Str::limit($article->body, 200) }}</div>
     @endforeach

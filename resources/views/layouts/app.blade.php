@@ -14,6 +14,12 @@
         <a href="{{ route('articles.index') }}">Статьи</a> |
         <a href="{{ route('about') }}">О блоге</a>
     </nav>
+
+    @if (session('success'))
+        <div style="padding: 10px; margin: 10px 0; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 4px;">
+            {{ session('success') }}
+        </div>
+    @endif
     
     <div class="container mt-4">
         <h1>@yield('header')</h1>
